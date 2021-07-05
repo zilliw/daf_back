@@ -7,8 +7,10 @@ import javax.persistence.Id;
 @Entity
 public class Toto {
     @Id @GeneratedValue
-    private  Long id;
+    private Integer id;
+    private Integer code;
     private String name;
+
 
     public Toto() {}
 
@@ -16,18 +18,21 @@ public class Toto {
         this.name = name;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return this.id;
     }
-
+    public Integer getCode() {return this.code; }
     public String getName() {
         return this.name;
     }
 
-    public void setId(Long id) {
+
+    public void setId(Integer id) {
         this.id = id;
     }
-
+    public void setCode(Integer code) {
+        this.code = code;
+    }
     public void setName(String name) {
         this.name = name;
     }
