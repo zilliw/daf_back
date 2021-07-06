@@ -1,4 +1,4 @@
-package com.william.entity;
+package com.william.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,7 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class Opportunity {
     @Id @GeneratedValue
-    private Long id;
+    private Integer id;
     private String code;
     private String childCode;
     private String client;
@@ -17,7 +17,7 @@ public class Opportunity {
     private String delivery;
     private String status;
     /*
-    statut= en cours, solde, annule, supprime. Enum ?
+    statut= en cours, solde, annule, supprime
     prestation: prestation projet, abonnement
     departement: observatoire, fluide,
     responsable projet: william azis,
@@ -25,11 +25,13 @@ public class Opportunity {
 
     public Opportunity() {}
 
-    public Opportunity(String name) {
+    public Opportunity(Integer id, String code, String childCode, String name) {
+        this.id = id;
+        this.code = code;
+        this.childCode = childCode;
         this.name = name;
     }
-
-            public Long getId() {
+            public Integer getId() {
                 return this.id;
             }
             public String getCode() {
@@ -38,11 +40,11 @@ public class Opportunity {
             public String getChildCode() {
                 return this.childCode;
             }
-            public String getClient() {
-                return this.client;
-            }
             public String getName() {
                 return this.name;
+            }
+            public String getClient() {
+                return this.client;
             }
             public String getDivision() {
                 return this.division;
@@ -57,7 +59,7 @@ public class Opportunity {
                 return this.status;
             }
 
-            public void setId(Long id) {
+            public void setId(Integer id) {
                 this.id = id;
             }
             public void setCode(String code) {
