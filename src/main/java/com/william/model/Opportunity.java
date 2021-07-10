@@ -86,4 +86,7 @@ public class Opportunity {
             public void setStatus(String status) {
                 this.status = status;
             }
+
+    public void save(Opportunity opportunity) {
+    }
 }
