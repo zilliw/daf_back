@@ -3,15 +3,19 @@ package com.william.controller;
 import com.william.model.Opportunity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 public class OpportunityController {
+  ArrayList<Opportunity> Opportunities = new ArrayList<Opportunity>(List.of());
+
 
   @GetMapping("/Opportunity")
-  List<Opportunity> all() {
-    return List.of(new Opportunity(1, "AA", "AA", "William"), new Opportunity(2,"BB","BB", "Aymeric"));
+  public String getOpportunity() {
+    return "Opportunity displayed";
   }
+
 
   @PostMapping("/Opportunity")
   public String addOpportunity() {

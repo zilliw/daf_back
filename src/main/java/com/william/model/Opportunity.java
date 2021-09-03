@@ -87,6 +87,4 @@ public class Opportunity {
                 this.status = status;
             }
 
-    public void save(Opportunity opportunity) {
-    }
 }
