@@ -2,7 +2,6 @@ package com.william.controller;
 
 import com.william.model.Opportunity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,14 +11,14 @@ public class OpportunityController {
 
 
   @GetMapping("/Opportunity")
-  public String getOpportunity() {
-    return "Opportunity displayed";
+  public ArrayList<Opportunity> getOpportunity() {
+    return Opportunities;
   }
 
-
   @PostMapping("/Opportunity")
-  public String addOpportunity() {
-    return "Opportunity created";
+  public ArrayList<Opportunity> addOpportunity() {
+    Opportunities.add(new Opportunity(1,"toto","affaire1","affaire1"));
+    return Opportunities;
   }
 
   @DeleteMapping("/Opportunity")

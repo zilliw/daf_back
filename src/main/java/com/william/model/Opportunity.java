@@ -7,7 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class Opportunity {
     @Id @GeneratedValue
-    private Integer id;
+    private int id;
     private String code;
     private String childCode;
     private String client;
@@ -23,15 +23,13 @@ public class Opportunity {
     responsable projet: william azis,
     **/
 
-    public Opportunity() {}
-
-    public Opportunity(Integer id, String code, String childCode, String name) {
+    public Opportunity(int id, String code, String childCode, String name) {
         this.id = id;
         this.code = code;
         this.childCode = childCode;
         this.name = name;
     }
-            public Integer getId() {
+            public int getId() {
                 return this.id;
             }
             public String getCode() {
@@ -59,7 +57,7 @@ public class Opportunity {
                 return this.status;
             }
 
-            public void setId(Integer id) {
+            public void setId(int id) {
                 this.id = id;
             }
             public void setCode(String code) {
