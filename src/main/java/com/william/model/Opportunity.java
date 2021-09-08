@@ -23,11 +23,16 @@ public class Opportunity {
     responsable projet: william azis,
     **/
 
-    public Opportunity(int id, String code, String childCode, String name) {
+    public Opportunity(int id, String code, String childCode, String client, String name, String division, String responsible, String delivery, String status ) {
         this.id = id;
         this.code = code;
         this.childCode = childCode;
+        this.client = client;
         this.name = name;
+        this.division = division;
+        this.responsible = responsible;
+        this.delivery = delivery;
+        this.status = status;
     }
             public int getId() {
                 return this.id;
