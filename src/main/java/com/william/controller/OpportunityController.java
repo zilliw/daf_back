@@ -15,8 +15,8 @@ public class OpportunityController {
   }
 
   @PostMapping("/Opportunity")
-  public ArrayList<Opportunity> addOpportunity(int ind, String code, String childcode, String Client, String name, String division, String responsible, String delivery, String status) {
-    Opportunities.add(new Opportunity(ind,code,childcode,Client,name,division,responsible, delivery,status));
+  public ArrayList<Opportunity> addOpportunity(int id, String code, String childcode, String Client, String name, String division, String responsible, String delivery, String status) {
+    Opportunities.add(new Opportunity(id,code,childcode,Client,name,division,responsible, delivery,status));
     return Opportunities;
   }
 
