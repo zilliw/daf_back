@@ -14,16 +14,15 @@ public class Opportunity {
     private String name;
     private String division;
     private String responsible;
-    private String delivery;
-    private String status;
+
+    private Delivery delivery;
+    private Status status;
     /*
-    statut= en cours, solde, annule, supprime
-    prestation: prestation projet, abonnement
     departement: observatoire, fluide,
     responsable projet: william azis,
     **/
 
-    public Opportunity(int id, String code, String childCode, String client, String name, String division, String responsible, String delivery, String status ) {
+    public Opportunity(int id, String code, String childCode, String client, String name, String division, String responsible, Delivery delivery, Status status ) {
         this.id = id;
         this.code = code;
         this.childCode = childCode;
@@ -55,10 +54,10 @@ public class Opportunity {
             public String getResponsible() {
                 return this.responsible;
             }
-            public String getDelivery() {
+            public Delivery getDelivery() {
                 return this.delivery;
             }
-            public String getStatus() {
+            public Status getStatus() {
                 return this.status;
             }
 
@@ -83,10 +82,10 @@ public class Opportunity {
             public void setResponsible(String responsible) {
                 this.responsible = responsible;
             }
-            public void setDelivery(String delivery) {
+            public void setDelivery(Delivery delivery) {
                 this.delivery = delivery;
             }
-            public void setStatus(String status) {
+            public void setStatus(Status status) {
                 this.status = status;
             }
 
