@@ -12,9 +12,9 @@ public class Opportunity {
     private String childCode;
     private String client;
     private String name;
-    private String division;
     private String responsible;
 
+    private Department department;
     private Delivery delivery;
     private Status status;
     /*
@@ -22,13 +22,13 @@ public class Opportunity {
     responsable projet: william azis,
     **/
 
-    public Opportunity(int id, String code, String childCode, String client, String name, String division, String responsible, Delivery delivery, Status status ) {
+    public Opportunity(int id, String code, String childCode, String client, String name, Department department, String responsible, Delivery delivery, Status status ) {
         this.id = id;
         this.code = code;
         this.childCode = childCode;
         this.client = client;
         this.name = name;
-        this.division = division;
+        this.department = department;
         this.responsible = responsible;
         this.delivery = delivery;
         this.status = status;
@@ -48,8 +48,8 @@ public class Opportunity {
             public String getClient() {
                 return this.client;
             }
-            public String getDivision() {
-                return this.division;
+            public Department getDepartment() {
+                return this.department;
             }
             public String getResponsible() {
                 return this.responsible;
@@ -76,8 +76,8 @@ public class Opportunity {
             public void setName(String name) {
                 this.name = name;
             }
-            public void setDivision(String division) {
-                this.division = division;
+            public void setDepartment(Department department) {
+                this.department = department;
             }
             public void setResponsible(String responsible) {
                 this.responsible = responsible;
