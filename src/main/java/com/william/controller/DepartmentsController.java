@@ -10,9 +10,9 @@ import java.util.ArrayList;
 @RestController
 public class DepartmentsController {
     ArrayList<Department> Departments = new ArrayList<Department>();
-    
+
     @GetMapping("/Department")
-    public ArrayList<Department> getDepartment() {
+    public ArrayList<Department> getDepartments() {
         return Departments;
     }
 

@@ -18,7 +18,6 @@ public class Opportunity {
     private Delivery delivery;
     private Status status;
     /*
-    departement: observatoire, fluide,
     responsable projet: william azis,
     **/
 
