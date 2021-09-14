@@ -1,8 +1,5 @@
 package com.william.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 public class Opportunity {
     private int id;
@@ -10,23 +7,20 @@ public class Opportunity {
     private String childCode;
     private String client;
     private String name;
-    private String responsible;
+    private String user;
 
     private Department department;
     private Delivery delivery;
     private Status status;
-    /*
-    responsable projet: william azis,
-    **/
 
-    public Opportunity(int id, String code, String childCode, String client, String name, Department department, String responsible, Delivery delivery, Status status ) {
+    public Opportunity(int id, String code, String childCode, String client, String name, Department department, String user, Delivery delivery, Status status ) {
         this.id = id;
         this.code = code;
         this.childCode = childCode;
         this.client = client;
         this.name = name;
         this.department = department;
-        this.responsible = responsible;
+        this.user = user;
         this.delivery = delivery;
         this.status = status;
     }
@@ -48,8 +42,8 @@ public class Opportunity {
             public Department getDepartment() {
                 return this.department;
             }
-            public String getResponsible() {
-                return this.responsible;
+            public String getUser() {
+                return this.user;
             }
             public Delivery getDelivery() {
                 return this.delivery;
@@ -76,8 +70,8 @@ public class Opportunity {
             public void setDepartment(Department department) {
                 this.department = department;
             }
-            public void setResponsible(String responsible) {
-                this.responsible = responsible;
+            public void setUser(String user) {
+                this.user = user;
             }
             public void setDelivery(Delivery delivery) {
                 this.delivery = delivery;
