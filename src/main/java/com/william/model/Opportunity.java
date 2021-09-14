@@ -13,7 +13,7 @@ public class Opportunity {
     private Delivery delivery;
     private Status status;
 
-    public Opportunity(int id, String code, String childCode, String client, String name, Department department, String user, Delivery delivery, Status status ) {
+    public Opportunity(int id, String code, String childCode, String client, String name, Department department, User user, Delivery delivery, Status status ) {
         this.id = id;
         this.code = code;
         this.childCode = childCode;
