@@ -4,9 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
 public class Opportunity {
-    @Id @GeneratedValue
     private int id;
     private String code;
     private String childCode;
