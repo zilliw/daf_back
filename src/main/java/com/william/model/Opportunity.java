@@ -7,7 +7,7 @@ public class Opportunity {
     private String childCode;
     private String client;
     private String name;
-    private String user;
+    private User user;
 
     private Department department;
     private Delivery delivery;
@@ -42,7 +42,7 @@ public class Opportunity {
             public Department getDepartment() {
                 return this.department;
             }
-            public String getUser() {
+            public User getUser() {
                 return this.user;
             }
             public Delivery getDelivery() {
@@ -70,7 +70,7 @@ public class Opportunity {
             public void setDepartment(Department department) {
                 this.department = department;
             }
-            public void setUser(String user) {
+            public void setUser(User user) {
                 this.user = user;
             }
             public void setDelivery(Delivery delivery) {
